@@ -1,3 +1,36 @@
+/* STEP 1: Configure an element to be animated */
+#animated-shape {
+    background: crimson;
+    width: 200px;
+    height: 200px;
+    /* sub-properties for the animation */
+    animation-name: colorchange-alt; 
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; 
+}
+/* STEP 2: Define the animation sequence */
+@keyframes colorchange {
+    from { background: crimson;}
+    to{ background: gold;}
+}
+@keyframes colorchange-alt {
+    0% { background: crimson;}
+    50% { 
+        background: black; 
+        transform: scale(0) rotate(360deg) skew(30deg);
+     }
+    100% { background: crimson;}
+}
+
+
+
+
+
+
+
+
+
 .box {
     background: pink;
     margin: 20px;
@@ -20,7 +53,7 @@
     transform: skew(-25deg);
 }
 
-/* translate(x) moves element horizontally (to the right if positiive, translate (x, y) moves diagoanally */
+/* translate(x) moves element horizontally (to the right if positiive), translate (x, y) moves diagoanally */
 
 #translate {
     transform: translate(200px, -200px);
