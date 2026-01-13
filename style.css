@@ -12,16 +12,43 @@
 /* STEP 2: Define the animation sequence */
 @keyframes colorchange {
     from { background: crimson;}
-    to{ background: gold;}
+    to{ background: white;}
 }
 @keyframes colorchange-alt {
     0% { background: crimson;}
     50% { 
-        background: black; 
-        transform: scale(0) rotate(360deg) skew(30deg);
+        background: pink; 
+        transform: scale(0) rotate(360deg);
      }
     100% { background: crimson;}
 }
+
+/* STEP 1: Config. an element to be animated but using the shortcut "animated" property which sets the name, duration, iterations, timing function ALL IN ONE LINE! */
+
+#animated-emoji {
+    font-size: 65px;
+    animation: move-emoji 5s infinite ease-in-out;
+    display: inline-block;
+    position: absolute;
+    top: 75px;
+    left: 75px;
+}
+
+/* STEP 2: Define an animation sequence */
+
+@keyframes move-emoji {
+    0% {
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(200deg) scale(1.5);
+    }
+    100% {
+        transform: rotate(360)deg;
+     }
+}
+
+
 
 
 
